@@ -1264,3 +1264,5 @@ Complete!
 ```
 
 There, the update ran successfully!
+
+This is just a guess, I am not sure if I will have time to check the various packages, but seems there is a dependency missing to force the redhat-release package to get the latest GPG keys before other packages are updated.
