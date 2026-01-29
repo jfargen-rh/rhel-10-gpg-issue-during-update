@@ -394,7 +394,8 @@ Error: GPG check FAILED
 ```
 
 The fix is pretty simple, but took a while to dig out:
- dnf whatprovides "*/RPM-GPG-KEY-redhat-release"
+```
+# dnf whatprovides "*/RPM-GPG-KEY-redhat-release"
 Updating Subscription Management repositories.
 Red Hat Enterprise Linux 10 for x86_64 - BaseOS (RPMs)                                                            8.3 MB/s |  46 MB     00:05    
 Red Hat Enterprise Linux 10 for x86_64 - AppStream (RPMs)                                                         7.0 MB/s |  27 MB     00:03    
@@ -403,8 +404,10 @@ redhat-release-10.0-30.el10.x86_64 : Red Hat Enterprise Linux release file
 Repo        : rhel-10-for-x86_64-baseos-rpms
 Matched from:
 Filename    : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+```
 
 So the package which provide the GPG keys is redhat-release, so lets update that package:
+```
 # dnf install redhat-release
 Updating Subscription Management repositories.
 Last metadata expiration check: 0:01:11 ago on Wed 28 Jan 2026 04:29:11 PM PST.
@@ -441,9 +444,11 @@ Upgraded:
   redhat-release-10.1-18.el10.x86_64                                                                                                              
 
 Complete!
+```
 
 Now try running ```# dnf update```:
-dnf update
+```
+# dnf update
 Updating Subscription Management repositories.
 Last metadata expiration check: 0:01:31 ago on Wed 28 Jan 2026 04:29:11 PM PST.
 Dependencies resolved.
@@ -1256,5 +1261,6 @@ Installed:
   kernel-modules-core-6.12.0-124.29.1.el10_1.x86_64                       kernel-modules-extra-6.12.0-124.29.1.el10_1.x86_64                      
 
 Complete!
+```
 
 There, the update ran successfully!
