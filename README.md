@@ -1,5 +1,5 @@
 # RHEL 10 GPG issue during dnf update
-When updating packages on Red Hat Enterprise Linux 10 (RHEL10) to the latest versions you may encounter an  error ```Error: GPG check FAILED``` when running ```dnf update```.
+TL;DR - When updating packages on Red Hat Enterprise Linux 10 (RHEL10) to the latest versions you may encounter an  error ```Error: GPG check FAILED``` and other GPG errors when running ```dnf update```. First, run ```dnf update redhat-release``` to grab the latest GPG keys, then run ```dnf update``` to update the rest of the system packages.
 
 You can see the system is already using RHEL10.1, but this may also affect RHEL10.0 releases I haven't been tested previous releases:
 ```
