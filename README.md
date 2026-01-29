@@ -3,10 +3,10 @@ When updating Red Hat Enterprise Linux 10 (RHEL10) to the latest release you may
 
 You can see the system is already using RHEL10.1, but this may also affect RHEL10.0 releases they haven't been tested:
 ```# cat /etc/redhat-release 
-Red Hat Enterprise Linux release 10.1 (Coughlan)```
+Red Hat Enterprise Linux release 10.1 (Coughlan)
 
 Here is the output of the dnf update:
-# dnf update
+```# dnf update
 Updating Subscription Management repositories.
 Red Hat Enterprise Linux 10 for x86_64 - BaseOS (RPMs)                                                            7.7 MB/s |  43 MB     00:05    
 Red Hat Enterprise Linux 10 for x86_64 - AppStream (RPMs)                                                         2.0 MB/s | 4.2 MB     00:02    
