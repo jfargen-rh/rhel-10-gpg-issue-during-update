@@ -3,7 +3,7 @@ When updating Red Hat Enterprise Linux 10 (RHEL10) to the latest release you may
 
 You can see the system is already using RHEL10.1, but this may also affect RHEL10.0 releases they haven't been tested:
 ```# cat /etc/redhat-release 
-Red Hat Enterprise Linux release 10.1 (Coughlan)
+Red Hat Enterprise Linux release 10.1 (Coughlan)```
 
 Here is the output of the dnf update:
 ```# dnf update
@@ -386,7 +386,7 @@ Public key for openssl-devel-3.5.1-7.el10_1.x86_64.rpm is not installed. Failing
  GPG Keys are configured as: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 The downloaded packages were saved in cache until the next successful transaction.
 You can remove cached packages by executing 'dnf clean packages'.
-Error: GPG check FAILED
+Error: GPG check FAILED```
 
 The fix is pretty simple, but took a while to dig out:
  dnf whatprovides "*/RPM-GPG-KEY-redhat-release"
