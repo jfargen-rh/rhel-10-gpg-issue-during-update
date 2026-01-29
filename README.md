@@ -1,4 +1,4 @@
-# rhel-10-gpg-issue-during-update
+# RHEL 10 GPG issue during dnf update
 When updating Red Hat Enterprise Linux 10 (RHEL10) to the latest release you may encounter this error when running ```dnf update``` to update to the latest packages.
 
 You can see the system is already using RHEL10.1, but this may also affect RHEL10.0 releases they haven't been tested:
